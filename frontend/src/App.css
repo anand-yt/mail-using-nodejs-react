@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #dedcdc;
+  width: 100%;
+  
+  font-family: Arial, sans-serif;
+}
+.container {
+  
+    max-width: 900px; 
+  background-color: #fff;
+  display: flex;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 10px 14px 19px 12px rgba(0, 0, 0, 0.1);
+ animation: fadeInUp 2s ease both;
+}
+.contact-container {
+ width: 50%;
+ padding: 5%;
+ text-align: center;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);  
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-input {
+  animation: slideInRight 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-container h2 {
+  color: #333;
+  font-size: 34px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+span{
+  color: #f06a6a;
+}
+
+.contact-container input[type="text"],
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+}
+
+.contact-container textarea {
+  resize: none;
+}
+
+.contact-container button {
+  background: linear-gradient(to right, #f06a6a, #ffd059);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+
+  width: 60%;
+}
+
+.contact-container button:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+.image-container{
+  margin: auto;
+  width: 50%;
+  height: max-content;
+  height: 100%;
+}
+.image-container img{
+  width: 100%;
+  animation: scale 2s ease-in-out infinite alternate;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.01);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    flex-direction: column;
+    width: 90%; 
+    padding: 20px; 
+  }
+  .contact-container {
+    width: 100%;
+    padding: 5% 10%;
+  }
+  .image-container {
+    width: 100%;
+    
+  }
+  .image-container img {
+    width: 100%;
+    
+  }
+}
