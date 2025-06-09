@@ -26,13 +26,6 @@ function sendmail(name,email){
   });
  
   
-//   var mailOptions = {
-//     from: process.env.EMAILID,
-//     to: req.body.email,
-//     cc: "anand.k4756@gmail.com",
-//     subject: "Thanks for giving feedback " + name,
-//     text: "Thanks for your message you have sent to us --> " + message,
-//   };
 
 const subject = 'Mail regarding feedback';
 const template = handlebars.compile(fs.readFileSync(path.join(__dirname, 'templates/','feedback.hbs'), 'utf8'));
